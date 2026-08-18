@@ -120,12 +120,13 @@ kill <PID_DO_PROCESSO>
 > **Justificativa de Segurança:**  
 > Demonstra capacidade operacional para contenção de ameaças em tempo real, interrompendo scripts maliciosos ou processos que estejam consumindo recursos indevidamente.
 
+```mermaid
 flowchart TD
-A[🚀 Início: Instância Debian] --> B[📌 1. Saúde & Logs\nuptime / top / journalctl]
-B --> C[📌 2. Gestão de IAM\nuseradd / passwd / tail]
-C --> D[📌 3. Hardening de Arquivos\nchmod 600 / chown]
-D --> E[📌 4. Contenção de Incidentes\nps aux / kill]
-E --> F[✅ Servidor Auditado & Seguro]
+    A["🚀 Início: Instância Debian"] --> B["📌 1. Saúde & Logs<br>uptime / top / journalctl"]
+    B --> C["📌 2. Gerenciamento de IAM<br>useradd / passwd / tail"]
+    C --> D["📌 3. Hardening de Arquivos<br>chmod 600 / chown"]
+    D --> E["📌 4. Contenção de Incidentes<br>ps aux / kill"]
+    E --> F["✅ Servidor Auditado & Seguro"]
 
     style A fill:#2d3748,stroke:#cbd5e0,color:#fff
     style B fill:#1a202c,stroke:#4a5568,color:#fff
@@ -133,3 +134,4 @@ E --> F[✅ Servidor Auditado & Seguro]
     style D fill:#2b6cb0,stroke:#63b3ed,color:#fff
     style E fill:#c53030,stroke:#feb2b2,color:#fff
     style F fill:#2f855a,stroke:#9ae6b4,color:#fff
+```
