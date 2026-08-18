@@ -129,21 +129,15 @@ flowchart TD
     D --> E("📌 4. Contenção de Incidentes<br>ps aux / kill")
     E --> F("✅ Servidor Auditado & Seguro")
 
-    %% Estilos de Modernização (Arredondamento Universal)
-    classDef rounded rx:10, ry:10;
+    %% Estilos de Arredondamento
+    classDef rounded rx:12, ry:12;
     class A,B,C,D,E,F rounded;
 
-    %% Estilos de Cores (Progressão da Crítica para a Segurança)
-    %% Início (Alerta/Crítico)
-    style A fill:#c53030,stroke:#feb2b2,color:#fff
-    %% Passo 1 (Atenção/Aviso)
-    style B fill:#e65100,stroke:#ffb74d,color:#fff
-    %% Passo 2 (Informação Básica/Amarelo)
-    style C fill:#f9a825,stroke:#fff176,color:#000
-    %% Passo 3 (Ação Progressiva/Azul Claro)
-    style D fill:#29b6f6,stroke:#81d4fa,color:#000
-    %% Passo 4 (Contenção/Ação Forte/Azul Escuro)
-    style E fill:#0277bd,stroke:#4fc3f7,color:#fff
-    %% Final (Seguro/Sucesso/Verde)
-    style F fill:#2f855a,stroke:#9ae6b4,color:#fff
+    %% Aplicação Exata das Cores da Imagem
+    style A fill:#2592cb,stroke:#58b4e2,color:#ffffff
+    style B fill:#8071a9,stroke:#a699cb,color:#ffffff
+    style C fill:#72d1a8,stroke:#9ee5c6,color:#000000
+    style D fill:#f08261,stroke:#f8aa91,color:#ffffff
+    style E fill:#e0a32e,stroke:#f1c261,color:#ffffff
+    style F fill:#128c5a,stroke:#3bb480,color:#ffffff
 ```
