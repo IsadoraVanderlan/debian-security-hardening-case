@@ -29,7 +29,7 @@ flowchart TD
     style C fill:#72d1a8,stroke:#9ee5c6,color:#000000
     style D fill:#f08261,stroke:#f8aa91,color:#ffffff
     style E fill:#e0a32e,stroke:#f1c261,color:#ffffff
-    style F fill:#128c5a,stroke:#3bb480,color:#ffffff
+    style F fill:#128c5a,stroke:#3bb480,color:#ffffff ```
 
 ---
 
