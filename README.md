@@ -23,13 +23,13 @@ flowchart TD
     classDef rounded rx:12, ry:12;
     class A,B,C,D,E,F rounded;
 
-    %% Aplicação Exata das Cores da Imagem
+    %% Aplicação Exata das Cores
     style A fill:#2592cb,stroke:#58b4e2,color:#ffffff
     style B fill:#8071a9,stroke:#a699cb,color:#ffffff
     style C fill:#72d1a8,stroke:#9ee5c6,color:#000000
     style D fill:#f08261,stroke:#f8aa91,color:#ffffff
     style E fill:#e0a32e,stroke:#f1c261,color:#ffffff
-    style F fill:#128c5a,stroke:#3bb480,color:#ffffff ```
+    style F fill:#128c5a,stroke:#3bb480,color:#ffffff
 
 ---
 
