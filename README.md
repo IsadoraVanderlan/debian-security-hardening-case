@@ -16,13 +16,7 @@ Para reproduzir este laboratório, você precisará de:
 - **Acesso:** Permissões de superusuário (`su -`).
 - **Ferramentas:** Terminal Bash padrão.
 
-````bash
-# Clone este repositório para acompanhar os comandos
-git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-cd seu-repositorio
-
 ---
-
 
 ### 📊 Fluxo Operacional do Processo de Hardening
 
@@ -43,7 +37,7 @@ flowchart TD
     style D fill:#f08261,stroke:#f8aa91,color:#ffffff
     style E fill:#e0a32e,stroke:#f1c261,color:#ffffff
     style F fill:#128c5a,stroke:#3bb480,color:#ffffff
-````
+```
 
 ---
 
