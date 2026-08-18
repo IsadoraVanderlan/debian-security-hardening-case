@@ -53,7 +53,7 @@ cd /var/log && ls -la
 head -n 10 syslog
 ```
 
-![Mapeamento da Infraestrutura](/img)
+![Mapeamento de Saúde](/gifs/mapeamento-de-saude.gif)
 
 > **Justificativa de Segurança:**  
 > Garante a visibilidade do ambiente, permitindo identificar se a instância já possui anomalias de desempenho ou picos de processamento antes de qualquer intervenção.
@@ -82,7 +82,7 @@ sudo passwd analista_sec
 tail -n 5 /etc/passwd
 ```
 
-![Gestão de Identidades](/img)
+![Auditoria e Gestão](/gifs/auditoria-e-gestão.gif)
 
 > **Justificativa de Segurança:**  
 > Aplicação do princípio de não-repúdio. Cada ação no servidor deve ser atrelada a uma identidade nominal e rastreável, evitando o compartilhamento da conta root.
@@ -115,7 +115,7 @@ sudo chown analista_sec:analista_sec /tmp/dados_sensiveis/chaves.txt
 ls -la /tmp/dados_sensiveis
 ```
 
-![Proteção de Arquivos Sensíveis](/img)
+![Proteção de Arquivos Sensíveis](/gifs/proteção-de-arquivos.gif)
 
 > **Justificativa de Segurança:**  
 > Evita movimentação lateral dentro do servidor. Se outro usuário não autorizado comprometer o sistema, ele não conseguirá ler arquivos de credenciais protegidos com permissão `600`.
@@ -138,7 +138,7 @@ sleep 300 &
 kill <PID_DO_PROCESSO>
 ```
 
-![Contenção de Processos](/img)
+![Contenção de Processos](/gifs/contenção-de-processos.gif)
 
 > **Justificativa de Segurança:**  
-> Demonstra capacidade operacional para contenção de ameaças em tempo real, interrompendo scripts maliciosos ou processos que estejam consumindo recursos indevidamente.
+> Capacidade operacional para contenção de ameaças em tempo real, interrompendo scripts maliciosos ou processos que estejam consumindo recursos indevidamente.
