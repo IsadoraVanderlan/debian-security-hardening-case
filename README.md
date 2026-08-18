@@ -107,7 +107,7 @@ Ajustar a pasta para um diretório de produção mais realista (fora do /tmp), c
 
 ### **Comandos Executados:**
 
-````bash
+```bash
 # Criar diretório seguro no /var
 
 sudo mkdir -p /var/app/secrets
@@ -128,6 +128,7 @@ sudo chmod 600 /var/app/secrets/chaves.txt
 
 ls -la /var/app/secrets/chaves.txt
 ```
+
 ![Proteção de Arquivos Sensíveis](/gifs/proteção-de-arquivos.gif)
 
 > **Justificativa de Segurança:**
@@ -160,6 +161,7 @@ kill <PID_DO_PROCESSO>
 
 ps aux | grep sleep
 ```
+
 ![Contenção de Processos](/gifs/contenção-de-processos.gif)
 
 > **Justificativa de Segurança:**
@@ -189,4 +191,7 @@ Seguindo a trilha do projeto de estudo de segurança em nuvem, as próximas etap
 ## 🤝 Agradecimentos
 
 Agradecimento especial ao **Edson Bezerra** (_Manager, LATAM Cyber Security Infrastructure Services - DXC Technology_) pela mentoria, orientações estratégicas e incentivo na estruturação deste plano de estudos.
-````
+
+```
+
+```
