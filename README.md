@@ -107,23 +107,23 @@ Ajustar a pasta para um diretório de produção mais realista (fora do /tmp), c
 
 ### **Comandos Executados:**
 
-# 3.1 Criar diretório seguro no /var
+# Criar diretório seguro no /var
 
 sudo mkdir -p /var/app/secrets
 
-# 3.2 Criar o arquivo de credenciais
+# Criar o arquivo de credenciais
 
 sudo touch /var/app/secrets/chaves.txt
 
-# 3.3 Trocar o dono do arquivo para o usuário analista_sec
+# Trocar o dono do arquivo para o usuário analista_sec
 
 sudo chown analista_sec:analista_sec /var/app/secrets/chaves.txt
 
-# 3.4 Restringir leitura e escrita apenas para o dono (chmod 600)
+# Restringir leitura e escrita apenas para o dono (chmod 600)
 
 sudo chmod 600 /var/app/secrets/chaves.txt
 
-# 3.5 Validar o novo estado de permissões
+# Validar o novo estado de permissões
 
 ls -la /var/app/secrets/chaves.txt
 
@@ -142,19 +142,19 @@ Simular o processo suspeito em segundo plano, identificá-lo com ps aux e encerr
 
 ### **Comandos Executados:**
 
-# 4.1 Iniciar o processo em segundo plano (o '&' envia para o background)
+# Iniciar o processo em segundo plano (o '&' envia para o background)
 
 sleep 300 &
 
-# 4.2 Localizar o PID do processo 'sleep'
+# Localizar o PID do processo 'sleep'
 
 ps aux | grep sleep
 
-# 4.3 Encerrar o processo (Substitua PID_DO_PROCESSO pelo número capturado no passo acima)
+# Encerrar o processo (Substitua PID_DO_PROCESSO pelo número capturado no passo acima)
 
 kill <PID_DO_PROCESSO>
 
-# 4.4 Confirmar que o processo foi encerrado
+# Confirmar que o processo foi encerrado
 
 ps aux | grep sleep
 
