@@ -8,6 +8,21 @@ Este projeto apresenta a execução de um processo completo de **auditoria de se
 
 ---
 
+## 🛠️ Pré-requisitos e Ambiente de Testes
+
+Para reproduzir este laboratório, você precisará de:
+
+- **Sistema Operacional:** Debian 11 ou 12 (pode ser executado em VM VirtualBox, AWS EC2 ou WSL2).
+- **Acesso:** Permissões de superusuário (`sudo`).
+- **Ferramentas:** Terminal Bash padrão.
+
+````bash
+# Clone este repositório para acompanhar os comandos
+git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+cd seu-repositorio
+
+---
+
 ### 📊 Fluxo Operacional do Processo de Hardening
 
 ```mermaid
@@ -27,7 +42,7 @@ flowchart TD
     style D fill:#f08261,stroke:#f8aa91,color:#ffffff
     style E fill:#e0a32e,stroke:#f1c261,color:#ffffff
     style F fill:#128c5a,stroke:#3bb480,color:#ffffff
-```
+````
 
 ---
 
@@ -142,3 +157,28 @@ kill <PID_DO_PROCESSO>
 
 > **Justificativa de Segurança:**  
 > Capacidade operacional para contenção de ameaças em tempo real, interrompendo scripts maliciosos ou processos que estejam consumindo recursos indevidamente.
+
+---
+
+## 🚀 Próximos Passos (Roadmap de Evolução)
+
+Seguindo a trilha do projeto de estudo de segurança em nuvem, as próximas etapas priorizadas são:
+
+- **3. [Redes] Protocolos, Portas e Modelo TCP/IP, Servidores Web (Apache/Nginx) e Hardening**
+  - Mapeamento e liberação de portas estratégicas (firewall `ufw`/`iptables`).
+  - Implantação de servidores web e aplicação de hardening em configurações de Apache/Nginx.
+- **4. [DB] Bancos de Dados Relacionais e Práticas de Segurança SQL**
+  - Instalação e configuração segura de bancos de dados relacionais.
+  - Aplicação de boas práticas de controle de acesso e auditoria em SQL.
+- **5. [Scripting] Automação com Shell Script e PowerShell**
+  - Criação de scripts em Shell para automação de rotinas de auditoria em ambiente Linux.
+  - Automação de tarefas administrativas cross-platform usando PowerShell.
+- **6. [Scripting] Python para Cloud & Automação com Boto3**
+  - Desenvolvimento de rotinas em Python para gerenciamento e auditoria de segurança.
+  - Automação de recursos de infraestrutura em nuvem (AWS) com a biblioteca `boto3`.
+
+---
+
+## 🤝 Agradecimentos
+
+Agradecimento especial ao **Edson Bezerra** (_Manager, LATAM Cyber Security Infrastructure Services - DXC Technology_) pela mentoria, orientações estratégicas e incentivo na estruturação deste plano de estudos.
