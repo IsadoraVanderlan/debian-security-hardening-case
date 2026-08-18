@@ -8,6 +8,31 @@ Este projeto apresenta a execução de um processo completo de **auditoria de se
 
 ---
 
+### 📊 Fluxo Operacional do Processo de Hardening
+
+````mermaid
+flowchart TD
+    %% Definição da Estrutura e Conteúdo
+    A("🚀 Início: Instância Debian") --> B("📌 1. Saúde & Logs<br>uptime / top / journalctl")
+    B --> C("📌 2. Gerenciamento de IAM<br>useradd / passwd / tail")
+    C --> D("📌 3. Hardening de Arquivos<br>chmod 600 / chown")
+    D --> E("📌 4. Contenção de Incidentes<br>ps aux / kill")
+    E --> F("✅ Servidor Auditado & Seguro")
+
+    %% Estilos de Arredondamento
+    classDef rounded rx:12, ry:12;
+    class A,B,C,D,E,F rounded;
+
+    %% Aplicação Exata das Cores da Imagem
+    style A fill:#2592cb,stroke:#58b4e2,color:#ffffff
+    style B fill:#8071a9,stroke:#a699cb,color:#ffffff
+    style C fill:#72d1a8,stroke:#9ee5c6,color:#000000
+    style D fill:#f08261,stroke:#f8aa91,color:#ffffff
+    style E fill:#e0a32e,stroke:#f1c261,color:#ffffff
+    style F fill:#128c5a,stroke:#3bb480,color:#ffffff
+
+---
+
 ## 📌 1. Mapeamento da Infraestrutura e Saúde do Sistema
 
 ### **Objetivo:**
@@ -28,7 +53,7 @@ cd /var/log && ls -la
 
 # Inspecionar as primeiras linhas do log principal do sistema
 head -n 10 syslog
-```
+````
 
 ![Mapeamento da Infraestrutura](/img)
 
@@ -119,25 +144,3 @@ kill <PID_DO_PROCESSO>
 
 > **Justificativa de Segurança:**  
 > Demonstra capacidade operacional para contenção de ameaças em tempo real, interrompendo scripts maliciosos ou processos que estejam consumindo recursos indevidamente.
-
-```mermaid
-flowchart TD
-    %% Definição da Estrutura e Conteúdo
-    A("🚀 Início: Instância Debian") --> B("📌 1. Saúde & Logs<br>uptime / top / journalctl")
-    B --> C("📌 2. Gerenciamento de IAM<br>useradd / passwd / tail")
-    C --> D("📌 3. Hardening de Arquivos<br>chmod 600 / chown")
-    D --> E("📌 4. Contenção de Incidentes<br>ps aux / kill")
-    E --> F("✅ Servidor Auditado & Seguro")
-
-    %% Estilos de Arredondamento
-    classDef rounded rx:12, ry:12;
-    class A,B,C,D,E,F rounded;
-
-    %% Aplicação Exata das Cores da Imagem
-    style A fill:#2592cb,stroke:#58b4e2,color:#ffffff
-    style B fill:#8071a9,stroke:#a699cb,color:#ffffff
-    style C fill:#72d1a8,stroke:#9ee5c6,color:#000000
-    style D fill:#f08261,stroke:#f8aa91,color:#ffffff
-    style E fill:#e0a32e,stroke:#f1c261,color:#ffffff
-    style F fill:#128c5a,stroke:#3bb480,color:#ffffff
-```
