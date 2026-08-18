@@ -107,6 +107,7 @@ Ajustar a pasta para um diretório de produção mais realista (fora do /tmp), c
 
 ### **Comandos Executados:**
 
+````bash
 # Criar diretório seguro no /var
 
 sudo mkdir -p /var/app/secrets
@@ -126,10 +127,10 @@ sudo chmod 600 /var/app/secrets/chaves.txt
 # Validar o novo estado de permissões
 
 ls -la /var/app/secrets/chaves.txt
-
+```
 ![Proteção de Arquivos Sensíveis](/gifs/proteção-de-arquivos.gif)
 
-> **Justificativa de Segurança:**  
+> **Justificativa de Segurança:**
 > Evita movimentação lateral dentro do servidor. Se outro usuário não autorizado comprometer o sistema, ele não conseguirá ler arquivos de credenciais protegidos com permissão `600`.
 
 ---
@@ -142,6 +143,7 @@ Simular o processo suspeito em segundo plano, identificá-lo com ps aux e encerr
 
 ### **Comandos Executados:**
 
+```bash
 # Iniciar o processo em segundo plano (o '&' envia para o background)
 
 sleep 300 &
@@ -157,10 +159,10 @@ kill <PID_DO_PROCESSO>
 # Confirmar que o processo foi encerrado
 
 ps aux | grep sleep
-
+```
 ![Contenção de Processos](/gifs/contenção-de-processos.gif)
 
-> **Justificativa de Segurança:**  
+> **Justificativa de Segurança:**
 > Capacidade operacional para contenção de ameaças em tempo real, interrompendo scripts maliciosos ou processos que estejam consumindo recursos indevidamente.
 
 ---
@@ -187,3 +189,4 @@ Seguindo a trilha do projeto de estudo de segurança em nuvem, as próximas etap
 ## 🤝 Agradecimentos
 
 Agradecimento especial ao **Edson Bezerra** (_Manager, LATAM Cyber Security Infrastructure Services - DXC Technology_) pela mentoria, orientações estratégicas e incentivo na estruturação deste plano de estudos.
+````
