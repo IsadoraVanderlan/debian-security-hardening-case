@@ -45,7 +45,7 @@ flowchart TD
 
 ### **Objetivo:**
 
-Registrar a estabilidade do servidor e verificar os logs do sistema antes de aplicar as mudanças de segurança.
+Verificar a estabilidade do servidor e verificar os logs do sistema antes de aplicar as mudanças de segurança.
 
 ### **Comandos Executados:**
 
@@ -103,27 +103,29 @@ tail -n 5 /etc/passwd
 
 ### **Objetivo:**
 
-Simular a criação de um arquivo contendo credenciais sigilosas e restringir seu acesso apenas ao seu proprietário legítimo.
+Ajustar a pasta para um diretório de produção mais realista (fora do /tmp), criar o arquivo e aplicar o Princípio do Menor Privilégio..
 
 ### **Comandos Executados:**
 
-```bash
-# Criar diretório e arquivo simulando armazenamento de credenciais
-mkdir /tmp/dados_sensiveis
-touch /tmp/dados_sensiveis/chaves.txt
+# 3.1 Criar diretório seguro no /var
 
-# Verificar as permissões padrão atribuídas pelo sistema
-ls -la /tmp/dados_sensiveis
+sudo mkdir -p /var/app/secrets
 
-# Restringir permissões: leitura e escrita apenas para o dono (chmod 600)
-chmod 600 /tmp/dados_sensiveis/chaves.txt
+# 3.2 Criar o arquivo de credenciais
 
-# Transferir a posse do arquivo e do grupo para o usuário analista_sec
-sudo chown analista_sec:analista_sec /tmp/dados_sensiveis/chaves.txt
+sudo touch /var/app/secrets/chaves.txt
 
-# Validar o novo estado de permissões do arquivo
-ls -la /tmp/dados_sensiveis
-```
+# 3.3 Trocar o dono do arquivo para o usuário analista_sec
+
+sudo chown analista_sec:analista_sec /var/app/secrets/chaves.txt
+
+# 3.4 Restringir leitura e escrita apenas para o dono (chmod 600)
+
+sudo chmod 600 /var/app/secrets/chaves.txt
+
+# 3.5 Validar o novo estado de permissões
+
+ls -la /var/app/secrets/chaves.txt
 
 ![Proteção de Arquivos Sensíveis](/gifs/proteção-de-arquivos.gif)
 
@@ -136,17 +138,25 @@ ls -la /tmp/dados_sensiveis
 
 ### **Objetivo:**
 
-Simular a identificação e a interrupção imediata de um processo suspeito ou não autorizado em execução.
+Simular o processo suspeito em segundo plano, identificá-lo com ps aux e encerrá-lo.
 
 ### **Comandos Executados:**
 
-```bash
-# Simular a execução de um processo suspeito em segundo plano
+# 4.1 Iniciar o processo em segundo plano (o '&' envia para o background)
+
 sleep 300 &
 
-# Encerrar o processo suspeito enviando um sinal de encerramento pelo PID
+# 4.2 Localizar o PID do processo 'sleep'
+
+ps aux | grep sleep
+
+# 4.3 Encerrar o processo (Substitua PID_DO_PROCESSO pelo número capturado no passo acima)
+
 kill <PID_DO_PROCESSO>
-```
+
+# 4.4 Confirmar que o processo foi encerrado
+
+ps aux | grep sleep
 
 ![Contenção de Processos](/gifs/contenção-de-processos.gif)
 
