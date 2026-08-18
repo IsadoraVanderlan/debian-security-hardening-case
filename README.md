@@ -12,8 +12,8 @@ Este projeto apresenta a execução de um processo completo de **auditoria de se
 
 Para reproduzir este laboratório, você precisará de:
 
-- **Sistema Operacional:** Debian 11 ou 12 (pode ser executado em VM VirtualBox, AWS EC2 ou WSL2).
-- **Acesso:** Permissões de superusuário (`sudo`).
+- **Sistema Operacional:** Debian 13 ou 13 (pode ser executado em VM VirtualBox ou Hyper-v).
+- **Acesso:** Permissões de superusuário (`su -`).
 - **Ferramentas:** Terminal Bash padrão.
 
 ````bash
@@ -22,6 +22,7 @@ git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.co
 cd seu-repositorio
 
 ---
+
 
 ### 📊 Fluxo Operacional do Processo de Hardening
 
