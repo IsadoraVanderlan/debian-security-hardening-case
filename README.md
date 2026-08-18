@@ -13,7 +13,7 @@ Este projeto apresenta a execução de um processo completo de **auditoria de se
 Para reproduzir este laboratório, você precisará de:
 
 - **Sistema Operacional:** Debian 13 ou 13 (pode ser executado em VM VirtualBox ou Hyper-v).
-- **Acesso:** Permissões de superusuário (`su -`).
+- **Acesso:** Permissões de admin (`su -`).
 - **Ferramentas:** Terminal Bash padrão.
 
 ---
