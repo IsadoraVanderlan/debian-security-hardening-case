@@ -122,16 +122,28 @@ kill <PID_DO_PROCESSO>
 
 ```mermaid
 flowchart TD
-    A["🚀 Início: Instância Debian"] --> B["📌 1. Saúde & Logs<br>uptime / top / journalctl"]
-    B --> C["📌 2. Gerenciamento de IAM<br>useradd / passwd / tail"]
-    C --> D["📌 3. Hardening de Arquivos<br>chmod 600 / chown"]
-    D --> E["📌 4. Contenção de Incidentes<br>ps aux / kill"]
-    E --> F["✅ Servidor Auditado & Seguro"]
+    %% Definição da Estrutura e Conteúdo
+    A("🚀 Início: Instância Debian") --> B("📌 1. Saúde & Logs<br>uptime / top / journalctl")
+    B --> C("📌 2. Gerenciamento de IAM<br>useradd / passwd / tail")
+    C --> D("📌 3. Hardening de Arquivos<br>chmod 600 / chown")
+    D --> E("📌 4. Contenção de Incidentes<br>ps aux / kill")
+    E --> F("✅ Servidor Auditado & Seguro")
 
-    style A fill:#2d3748,stroke:#cbd5e0,color:#fff
-    style B fill:#1a202c,stroke:#4a5568,color:#fff
-    style C fill:#1a202c,stroke:#4a5568,color:#fff
-    style D fill:#2b6cb0,stroke:#63b3ed,color:#fff
-    style E fill:#c53030,stroke:#feb2b2,color:#fff
+    %% Estilos de Modernização (Arredondamento Universal)
+    classDef rounded rx:10, ry:10;
+    class A,B,C,D,E,F rounded;
+
+    %% Estilos de Cores (Progressão da Crítica para a Segurança)
+    %% Início (Alerta/Crítico)
+    style A fill:#c53030,stroke:#feb2b2,color:#fff
+    %% Passo 1 (Atenção/Aviso)
+    style B fill:#e65100,stroke:#ffb74d,color:#fff
+    %% Passo 2 (Informação Básica/Amarelo)
+    style C fill:#f9a825,stroke:#fff176,color:#000
+    %% Passo 3 (Ação Progressiva/Azul Claro)
+    style D fill:#29b6f6,stroke:#81d4fa,color:#000
+    %% Passo 4 (Contenção/Ação Forte/Azul Escuro)
+    style E fill:#0277bd,stroke:#4fc3f7,color:#fff
+    %% Final (Seguro/Sucesso/Verde)
     style F fill:#2f855a,stroke:#9ae6b4,color:#fff
 ```
